@@ -1,9 +1,23 @@
 # Forked Memo
  
 memo:
+
+## init
 ```
- STACK_NAME=image-resize-api-xxx CODE_BUCKET=xxx IMAGE_BUCKET=yyyyy npm run deploy
+npm ci
 ```
+
+## deploy  
+``` 
+STACK_NAME=image-resize-api-xxx CODE_BUCKET=xxx IMAGE_BUCKET=yyyyy npm run deploy
+```
+
+After then , you will get your own endpoint like
+``` <Generated-Your-Api-Gateway-Domain>/<Stage> ```
+
+## edit your CloudFront
+Add ``` Generated-Your-Api-Gateway-Domain ``` to Origin
+Add ``` /<Stage>``` to Origin Path
 
 # image-resizer-service
 
