@@ -4,7 +4,7 @@
   "description": "Serverless services that resizes an image stored in S3 bucket",
   "main": "src2/index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode production",
     "package": "npm run build && aws cloudformation package --template-file template.yaml --output-template-file dist/template-packaged.yml --s3-bucket $CODE_BUCKET",
     "install-cf": "aws cloudformation deploy --template-file dist/template-packaged.yml --capabilities CAPABILITY_IAM --stack-name image-resizer-rest-api --parameter-overrides ImageBucket=$IMAGE_BUCKET",
     "deploy": "npm run package && npm run install-cf",
