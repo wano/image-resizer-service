@@ -2,12 +2,12 @@
  
 memo:
 
-## init
+## 1. init
 ```
 npm ci
 ```
 
-## deploy  
+## 2. deploy  
 ``` 
 STACK_NAME=image-resize-api-xxx CODE_BUCKET=xxx IMAGE_BUCKET=yyyyy npm run deploy
 ```
@@ -15,10 +15,11 @@ STACK_NAME=image-resize-api-xxx CODE_BUCKET=xxx IMAGE_BUCKET=yyyyy npm run deplo
 After then , you will get your own endpoint like
 ``` <Generated-Your-Api-Gateway-Domain>/<Stage> ```
 
-## edit your CloudFront
+<!---
+## 3. edit your cloudfront setting.
 Add ``` Generated-Your-Api-Gateway-Domain ``` to Origin
 Add ``` /<Stage>``` to Origin Path
-
+--->
 # image-resizer-service
 
 This serverless application deploys a Lambda function and API Gateway to your AWS account that reads images from a S3 bucket (whose name defined at deployment) and serves them through API Gateway.
