@@ -1,3 +1,10 @@
+# Forked Memo
+ 
+memo:
+```
+ STACK_NAME=image-resize-api-xxx CODE_BUCKET=xxx IMAGE_BUCKET=yyyyy npm run deploy
+```
+
 # image-resizer-service
 
 This serverless application deploys a Lambda function and API Gateway to your AWS account that reads images from a S3 bucket (whose name defined at deployment) and serves them through API Gateway.
